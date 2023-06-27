@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+	
+	padding: 0;
+}
+body{
+	background: rgb(246, 255, 168);
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.header{
+	
+	width: 100%;
+	
+	height: 60px;
+	
+	line-height: 60px;
+	
+	background: #FFFFFF;
+	
+	box-shadow: 2px 3px 5px #ccc;
+}
+
+.headerf{
+	
+	width: 1200px;
+	
+	margin: auto;
+}
+
+.headerf img{
+	
+	float: left;
+	
+	height: 35px;
+	
+	margin-top: 12px;
+}
+/* 导航栏 */
+.headerf ul{
+	/* 右浮动 靠右对齐 */
+	float: right;
+}
+.headerf ul li{
+	/* 左浮动 靠左对齐 */
+	float: left;
+	/* 100px的左侧外边距 */
+	margin-left: 100px;
+}
+/* 导航栏a标签 */
+.headerf ul li a{
+	/* 设置颜色 */
+	color: #000000;
+	/* 底部内边距设置为5px */
+	padding-bottom: 5px;
+}
+/* 设置class为active 下的a */
+.headerf ul .active a{
+	/* 设置颜色 */
+	color: #f8ffbc;
+	/* 设置背景 */
+	border-bottom: 3px solid #e4f1a7;
+}
+/* 鼠标移入效果 */
+.headerf ul li a:hover{
+	/* 设置颜色 */
+	color: #faf9a6;
+	/* 设置背景 */
+	border-bottom: 3px solid #f2f7b1;
+}
+/* 轮播图 */
+.swiper {
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 1200px;
+	/* 设置高度 */
+	height: 380px;
+	/* 上外边距20px 左右居中 下外边距为20 */
+	margin: 20px auto;
+	/* 超出隐藏不显示 */
+	overflow: hidden;
+}
+
+.wrap {
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+	/* 居中显示 */
+	margin: auto;
+	/* 超出隐藏不显示 */
+	overflow: hidden;
+}
+
+.warp ul {
+	/* 绝对定位 */
+	position: absolute;
+}
+
+.wrap ul li {
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+}
+
+.wrap ul li img {
+	/* 设置图片长度 */
+	width: 100%;
+	/* 设置图片高度 */
+	height: 380px;
+	/* 图片超出大小自动延展 防止压缩 */
+	object-fit: cover;
+	/* 设置3px的圆形弧度 */
+	border-radius: 3px;
+}
+/* 底部下标 */
+.wrap ol {
+	/* 绝对定位 */
+	position: absolute;
+	/* 靠.wrap右侧5% */
+	right: 5%;
+	/* 靠.wrap底部20px */
+	bottom: 20px;
+}
+
+.wrap ol li {
+	/* 去除默认属性 */
+	list-style: none;
+	/* 设置高度 */
+	height: 10px;
+	/* 设置长度 */
+	width: 10px;
+	/* 边框 */
+	border: 1px solid #FFF;
+	/* 设置50%的圆弧 */
+	border-radius: 50%;
+	/* 左侧外边距为12px */
+	margin-left: 12px;
+	/* 左浮动 */
+	float: left;
+	/* 鼠标移上去 */
+	cursor: pointer;
+	/* 字体为0 隐藏文字 */
+	font-size: 0px;
+}
+
+.wrap ol .on {
+	/* 选中的背景 */
+	background: #16181a;
+}
+/* 图集 */
+.img-list ul{
+	/* flex布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距为30px 左右居中 */
+	margin: 30px auto;
+}
+/* 小盒子样式 */
+.img-list ul li{
+	/* 鼠标移入出现触手 */
+	cursor: pointer;
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 18%;
+	/* 设置高度 */
+	height: 216px;
+	/* 设置圆弧度 */
+	border-radius: 100%;
+	/* 超出隐藏 */
+	overflow: hidden;
+	/* 设置阴影 */
+	box-shadow: 2px 3px 5px #c3ecab;
+}
+/* 角色介绍 */
+.img-list ul li img{
+	/* 设置成块级元素 */
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+	/* 图片自适应裁剪 */
+	object-fit: cover;
+	/* 动画效果执行时间 */
+	transition: all 0.3s;
+	opacity: 0.8;
+}
+/* 文字描述 */
+.img-list ul li h3{
+	/* 设置绝对定位 */
+	position: absolute;
+	/* 距离父级上侧0 */
+	top: 0;
+	/* 距离父级左侧0 */
+	left: 0;
+	/* 设置长度 */
+	width: 100%;
+	/* 文字居中 */
+	text-align: center;
+	/* 设置高度 */
+	height: 216px;
+	/* 设置行高 */
+	line-height: 216px;
+	/* 设置颜色 */
+	color: #111312;
+	/* 设置字体大小 */
+	font-size: 24px;
+	/* 设置文字字体粗细 */
+	font-weight: normal;
+	/* 文字间距 */
+	letter-spacing: 3px;
+}
+/* 鼠标移入效果 */
+.img-list ul li:hover img{
+	/* 逆时针旋转360deg */
+	transform: rotate(-360deg);
+	opacity: 1;
+}
+/* 剧情简介 */
+.about{
+	/* 弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 居中显示 */
+	margin: auto;
+	/* 背景颜色 */
+	background: #b5ebe6;
+	/* 阴影 */
+	box-shadow: 2px 1px 10px #b0ebe6;
+}
+.about img{
+	/* 设置长度 */
+	width: 550px;
+	/* 设置高度 */
+	height: 100%;
+	/* 防止图片压缩 */
+	object-fit: cover;
+}
+.about-text{
+	/* 设置长度 */
+	width: 590px;
+	/* 上下左右内边距为20 */
+	padding: 20px;
+}
+.about-text h4{
+	/* 设置字体 */
+	font-size: 24px;
+	/* 设置颜色 */
+	color: #333333;
+	/* 字体粗细 */
+	font-weight: normal;
+	/* 文字间距 */
+	letter-spacing: 2px;
+	/* 下外边距为15px */
+	margin-bottom: 15px;
+}
+.about-text p{
+	/* 设置行高 */
+	line-height: 2.6;
+}
+.about-text a{
+	/* 设置成块级元素 单独一行显示 */
+	display: block;
+	/* 设置背景颜色 */
+	background: #a1f0f3;
+	/* 字体大小 */
+	font-size: 14px;
+	/* 字体颜色 */
+	color: #161515;
+	/* 设置长度 */
+	width: 100px;
+	/* 设置高度 */
+	height: 40px;
+	/* 设置行高 */
+	line-height: 40px;
+	/* 文字居中 */
+	text-align: center;
+	/* 上侧外边距为10 */
+	margin-top: 20px;
+	/* 圆弧为6px */
+	border-radius: 6px;
+}
+/* 精彩剧集 */
+.text{
+	/* 弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距50 左右居中 */
+	margin: 50px auto;
+}
+/* 文章 */
+.text-list{
+	/* 鼠标移入触手 */
+	cursor: pointer;
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 30%;
+	/* 上下左右内边距为 10 */
+	padding: 10px;
+	/* 背景颜色 */
+	background: #97eee2;
+	/* 盒子阴影 */
+	box-shadow: 2px 1px 10px #b6eaee;
+	/* 动画时间 */
+	transition: all 0.3s;
+}
+.text-list:hover{
+	transform: translateY(-20px);
+}
+.text .text-list .list-img{
+	/* 设置长度 */
+	width: 100%;
+}
+.text .text-list .list-img img{
+	/* 设置长度 */
+	width: 100%;
+	/* 设置行高 */
+	height: 220px;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.text .text-list .list-text{
+	/* 设置长度 */
+	width: 100%;
+}
+.text .text-list .list-text h3{
+	/* 上下外边距为5 左右为0 */
+	margin: 5px 0;
+	/* 设置字体颜色 */
+	color: #333;
+}
+.text .text-list .list-text p{
+	/* 设置行高 */
+	line-height: 1.6;
+	/* 设置字体大小 */
+	font-size: 15px;
+	/* 设置字体颜色 */
+	color: #777777;
+}
+/* 底部 */
+.footer{
+	/* 设置长度 */
+	width: 100%;
+	/* 上下内边距10 左右0 */
+	padding: 10px 0;
+	/* 字体颜色 */
+	color: #FFF;
+	/* 背景颜色 */
+	background: #333;
+	/* 文字居中 */
+	text-align: center;
+	/* 字体大小 */
+	font-size: 14px;
+}
+/* 剧情简介 */
+/* 顶部大图 */
+.about-banner{
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: auto;
+}
+.about-banner img{
+	/* 设置成块级元素防止图片空隙 */
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+}
+/* 关于 文字部分 */
+.about-page{
+	/* 设置长度 */
+	width: 1160px;
+	/* 上下20px 左右居中显示 */
+	margin: 20px auto;
+	/* 内边距为10px */
+	padding: 10px;
+	/* 背景颜色 */
+	background: #FFFFFF;
+}
+/* 文字标题 */
+.about-page h3{
+	/* 左右0 上下20px 外边距 */
+	margin: 20px 0;
+	/* 字体大小 */
+	font-size: 24px;
+	/* 文字间距 */
+	letter-spacing: 5px;
+}
+/* 文字内容 */
+.about-page p{
+	/* 设置行高 */
+	line-height: 1.8;
+	/* 设置文字颜色 */
+	color: #999999;
+	/* 字体大小 */
+	font-size: 17px;
+	/* 下侧外边距为10px */
+	margin-bottom: 10px;
+}
+/* 图集 */
+.img{
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距50px 左右居中 */
+	margin: 50px auto;
+}
+.img ul{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 子元素横向两端对齐 */
+	justify-content: space-between;
+}
+.img ul li {
+	list-style: none;
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 280px;
+	/* 设置高度 */
+	height: 220px;
+	/* 下侧外边距为20px */
+	margin-bottom: 20px;
+}
+.img img{
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.img p{
+	/* 绝对定位 */
+	position: absolute;
+	/* 父级底部的0位置 */
+	bottom: 0;
+	/* 父级左侧的0位置 */
+	left: 0;
+	/* 设置字体大小 */
+	font-size: 16px;
+	/* 设置长度 */
+	width: 92%;
+	/* 上下左右的内边距为父级的4% */
+	padding: 4%;
+	/* 设置字体颜色 */
+	color: #FFFFFF;
+	/* 设置背景颜色*/
+	background-color: rgba(0,0,0,0.4);
+}
+.jcjq{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距30px 左右居中 */
+	margin: 30px auto;
+}
+.jcjq .jcjq-list{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 100%;
+	/* 背景颜色 */
+	background-color: #FFFFFF;
+	/* 上下外边距20 左右为0 */
+	margin: 20px 0;
+	/* 设置阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+.jcjq .jcjq-list .list-img{
+	/* 设置长度 */
+	width: 30%;
+}
+.jcjq .jcjq-list .list-img img{
+	/* 设置为块级元素 */
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置行高 */
+	height: 220px;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.jcjq .jcjq-list .list-jcjq{
+	/* 设置长度 */
+	width: 68%;
+}
+.jcjq .jcjq-list .list-jcjq h3{
+	/* 上外边距20 右外边距10 下外边距20 左外边距0 */
+	margin: 20px 10px 20px 0;
+}
+.jcjq .jcjq-list .list-jcjq p{
+	/* 设置行高 */
+	line-height: 1.8;
+	/* 设置字体大小 */
+	font-size: 15px;
+	/* 右侧外边距为20 */
+	margin-right: 20px;
+	/* 设置字体颜色 */
+	color: #777777;
+}
